@@ -1,0 +1,45 @@
+:root {
+    --ifm-color-primary: #ff8a00;
+    --ifm-color-primary-dark: #ff6d00;
+    --ifm-color-primary-darker: #ff5a00;
+    --ifm-color-primary-light: #ff9c2a;
+    --ifm-color-primary-lighter: #ffb15a;
+
+    --leo-neon-red: #ff2a2a;
+    --leo-neon-orange: #ff8a00;
+    --leo-bg: #0b0e18;
+}
+
+/* Background */
+html[data-theme='dark'] {
+    --ifm-background-color: var(--leo-bg);
+    --ifm-navbar-background-color: rgba(11, 14, 24, 0.75);
+}
+
+/* Subtle neon glow for titles */
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+    text-shadow:
+        0 0 10px rgba(255, 138, 0, 0.18),
+        0 0 18px rgba(255, 42, 42, 0.10);
+}
+
+/* Code block neon frame */
+.theme-code-block {
+    border: 1px solid rgba(255, 138, 0, 0.25);
+    box-shadow:
+        0 0 0 1px rgba(255, 42, 42, 0.08),
+        0 0 22px rgba(255, 138, 0, 0.10);
+    border-radius: 14px;
+}
+
+/* Links */
+.markdown a {
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(255, 138, 0, 0.35);
+}
+
+.markdown a:hover {
+    border-bottom-color: rgba(255, 42, 42, 0.55);
+}
