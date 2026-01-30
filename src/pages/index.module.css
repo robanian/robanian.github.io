@@ -1,0 +1,271 @@
+/* 홈페이지 네온 스타일 */
+
+.heroBanner {
+  padding: 8rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #0d1117 100%);
+}
+
+.neonTitle h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: titleGlow 3s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px #4D9EFF,
+      0 0 20px #4D9EFF,
+      0 0 30px #4D9EFF,
+      0 0 40px #4D9EFF;
+  }
+  50% {
+    text-shadow: 
+      0 0 20px #4D9EFF,
+      0 0 30px #4D9EFF,
+      0 0 40px #4D9EFF,
+      0 0 50px #4D9EFF,
+      0 0 60px #4D9EFF;
+  }
+}
+
+.techStack {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.techBadge {
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #4D9EFF;
+  border-radius: 25px;
+  background: rgba(77, 158, 255, 0.1);
+  color: #4D9EFF;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(77, 158, 255, 0.3);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.techBadge:hover {
+  background: #4D9EFF;
+  color: #0d1117;
+  box-shadow: 
+    0 0 20px #4D9EFF,
+    0 0 30px #4D9EFF,
+    0 0 40px #4D9EFF;
+  transform: translateY(-2px);
+}
+
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+/* Features Section */
+.features {
+  padding: 4rem 0;
+  background: #0d1117;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #4D9EFF 0%, #00F0FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(77, 158, 255, 0.5);
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.featureCard {
+  background: #161b22;
+  border: 1px solid rgba(77, 158, 255, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.featureGradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  opacity: 0.6;
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+  border-color: #4D9EFF;
+  box-shadow: 
+    0 0 20px rgba(77, 158, 255, 0.3),
+    0 0 40px rgba(77, 158, 255, 0.2);
+}
+
+.featureCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #4D9EFF;
+}
+
+.featureCard p {
+  color: #7d8590;
+  line-height: 1.6;
+}
+
+/* Project Highlight */
+.projectSection {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
+}
+
+.projectCard {
+  background: #1c2128;
+  border: 2px solid rgba(77, 158, 255, 0.3);
+  border-radius: 20px;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(77, 158, 255, 0.2);
+}
+
+.projectCard::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    #4D9EFF,
+    #00F0FF,
+    #B544FE,
+    #FF2E97
+  );
+  border-radius: 20px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: borderRotate 4s linear infinite;
+}
+
+.projectCard:hover::before {
+  opacity: 0.3;
+}
+
+@keyframes borderRotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.projectHeader h3 {
+  font-size: 2rem;
+  color: #4D9EFF;
+  margin: 0;
+}
+
+.projectStatus {
+  padding: 0.5rem 1rem;
+  background: rgba(57, 255, 20, 0.1);
+  border: 1px solid #39FF14;
+  border-radius: 20px;
+  color: #39FF14;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+}
+
+.projectDescription {
+  color: #c9d1d9;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.projectTech {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.projectTech span {
+  padding: 0.4rem 1rem;
+  background: rgba(77, 158, 255, 0.1);
+  border: 1px solid rgba(77, 158, 255, 0.3);
+  border-radius: 15px;
+  color: #4D9EFF;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.projectLink {
+  display: inline-flex;
+  align-items: center;
+  color: #4D9EFF;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.projectLink:hover {
+  color: #00F0FF;
+  text-shadow: 0 0 10px #00F0FF;
+  transform: translateX(5px);
+}
+
+/* 반응형 */
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 4rem 0;
+  }
+
+  .neonTitle h1 {
+    font-size: 2.5rem;
+  }
+
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .projectCard {
+    padding: 2rem;
+  }
+
+  .projectHeader h3 {
+    font-size: 1.5rem;
+  }
+}
