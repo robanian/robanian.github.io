@@ -1,6 +1,4 @@
 // @ts-check
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -88,8 +86,8 @@ const config = {
             title: 'Projects',
             items: [
               {
-                label: 'DDukDDak Platform',
-                to: '/docs/projects/ddukddak',
+                label: 'Real-time 3D Platform',
+                to: '/docs/projects/realtime-3d-platform',
               },
             ],
           },
@@ -109,11 +107,7 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} LEO (Nam Taewoo). Built with Docusaurus.`,
       },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-        additionalLanguages: ['bash', 'javascript', 'typescript', 'json', 'yaml'],
-      },
+      // prism 설정 제거 - Docusaurus 기본값 사용
       colorMode: {
         defaultMode: 'dark',
         disableSwitch: false,
